@@ -6,12 +6,20 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="msapplication-tap-highlight" content="no">
 <link rel="stylesheet" href="css/chui-android-3.8.0.min.css">
+<link rel="stylesheet" href="css/flipclock.css">
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/chui-3.8.0.min.js"></script>
+<script src="js/flipclock.min.js"></script>
+<style>
+section {
+	min-height: 0px !important;
+}
+</style>
 </head>
 <body>
 <nav>
   <h1>Congress Debate Presiding Officer</h1>
+  <h3 style="float: right">By Isaac Pohl-Zaretsky</h3>
 </nav>
 <article id="main" class="current">
   <section>
@@ -26,25 +34,37 @@
         <h3>Chamber Percent</h3>
       </li>
     </ul>
+    <br />
+  <img src="img/ahs_logo.png" style="max-width: 20%; height: auto; margin-left: auto; margin-right: auto; display: block;">
+  <h5 style="text-align:center;">Code contributed by: <a href="https://github.com/paullaros">Paul Laros</a>, <a href="http://phonegap.com/">PhoneGap</a>, <a href="chocolatechip-ui.com">Chocolate Chip UI</</h5>
   </section>
 </article>
 <nav> <a class='button back'>Back</a>
   <h1>Timer</h1>
+  <h3 style="float: right">By Isaac Pohl-Zaretsky</h3>
 </nav>
 <article id='timer' class='next'>
-  <section> Timer goes here </section>
+<iframe width="100%" height="100%" frameborder="0" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%" src="stopwatch/index.html"></iframe>
 </article>
 <nav> <a class='button back'>Back</a>
   <h1>Motion Guide</h1>
+  <h3 style="float: right">By Isaac Pohl-Zaretsky</h3>
 </nav>
 <article id='motions' class='next'>
   <section> Motions wooho </section>
 </article>
 <nav> <a class='button back'>Back</a>
   <h1>Chamber Percent</h1>
+  <h3 style="float: right">By Isaac Pohl-Zaretsky</h3>
 </nav>
 <article id='percent' class='next'>
   <section> Chamber Buttons</section>
 </article>
+<script>
+var clock = new FlipClock($('.clock'), {
+	autoStart: false,
+	clockFace: 'MinuteCounter'
+});
+</script>
 </body>
 </html>
