@@ -57,17 +57,17 @@ function resetTime() {
 	setPage();
 }
 
-function checkAlerts() {	
-	if(minutes == 2 && seconds == 0 && centiseconds == 0) {
+function checkAlerts() {
+	if(minutes == 1 && seconds == 59 && centiseconds == 0) {
 		alertBackground(1);
 	}
-	if(minutes == 2 && seconds == 30 && centiseconds == 0) {
+	if(minutes == 2 && seconds == 29 && centiseconds == 0) {
 		alertBackground(2);
 	}
-	if(minutes == 2 && seconds == 55 && centiseconds == 0) {
+	if(minutes == 2 && seconds == 54 && centiseconds == 0) {
 		alertBackground(3);
 	}
-	if(minutes == 3 && seconds == 5 && centiseconds == 0) {
+	if(minutes == 3 && seconds == 4 && centiseconds == 0) {
 		alertBackground(5);
 	}
 }
@@ -80,6 +80,7 @@ function alertBackground(times) {
 		});
 	});
 }
+
 $(document).ready(function() {
 	setPage();
 	setInterval(incrementTimer, 10);
