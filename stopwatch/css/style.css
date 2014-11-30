@@ -5,7 +5,7 @@
 /* Layout */
 
 body {
-    background: rgb(236, 240, 241);
+	background-color: #ECF0F1;
     color: #4A4C54;
     transition: background linear .5s;
     -webkit-transition: background linear .5s;
@@ -80,14 +80,6 @@ a:hover, a:active, a:focus {
     overflow: hidden;
 }
 
-#start:target {
-    background: #F7614D;
-    color: #fff;
-}
-
-#start:target .btn {
-    color: #fff;
-}
 
 #start:target .btn:hover {
     color: #D6D6D6;
