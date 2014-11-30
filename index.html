@@ -96,18 +96,16 @@ section {
   <h3 style="float: right">By Isaac Pohl-Zaretsky</h3>
 </nav>
 <article id='percent' class='next'>
-  <section style="font-size: 30px; text-align: center">
-                Chamber Members:
-                <input type="number" id="members" onChange="processAmounts()" value="19"/>   
-                <br>
-                <br>
-                <br>
-                <span style="font-size: 20px;">Majority: </span><span id="majority" style="font-size: 30px;"></span>
-                <br>
-                <br>
-                <span style="font-size: 20px;">2/3: </span><span id="twothirds" style="font-size: 30px;"></span>   
-                
-                <script>
+  <section>
+    <ul class="list">
+      <li style="text-align:center"><span style="font-size: 20px;">Chamber Members:</span>
+        <input type="number" style="font-size: 20px;" id="members" onChange="processAmounts()" value="19"/>
+        <br>
+        <br>
+        <span style="font-size: 20px;">Majority: </span><span id="majority" style="font-size: 30px;"></span> <br>
+        <br>
+        <span style="font-size: 20px;">2/3: </span><span id="twothirds" style="font-size: 30px;"></span> 
+        <script>
 				function processAmounts() {
 					var majority = $('#members').val() / 2;
 					if(majority % 1 == 0)
@@ -118,7 +116,9 @@ section {
 					$('#twothirds').text(Math.ceil(twothirds));
 				}
 				processAmounts();
-				</script>
+		</script> 
+      </li>
+    </ul>
   </section>
 </article>
 </body>
