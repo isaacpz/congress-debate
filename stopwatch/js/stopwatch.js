@@ -73,7 +73,6 @@ function checkAlerts() {
 }
 
 function alertBackground(times) {
-	console.log("alerting " + times);
 	$('html body').delay(300).animate({backgroundColor: '#F7614D'}, 2, function() {
 		$('html body').delay(300).animate({backgroundColor: '#ECF0F1'}, 2, function() {
 			if(times > 1)

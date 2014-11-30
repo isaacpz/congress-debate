@@ -15,6 +15,10 @@ a {
     text-decoration: none;
 }
 
+span {
+	padding: 0;
+}
+
 a:hover, a:active, a:focus {
     outline: 0;
 }
@@ -67,7 +71,7 @@ a:hover, a:active, a:focus {
 }
 
 #counter {
-    font-size: 76px;
+    font-size: 70px;
     line-height: 1em;
     height: 1em;
 }
