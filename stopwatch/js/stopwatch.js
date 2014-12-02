@@ -1,3 +1,4 @@
+var started = null;
 var minutes = 0;
 var seconds = 0;
 var centiseconds = 0;
@@ -6,7 +7,12 @@ var active = false;
 function incrementTimer() {
 	if(!active)
 		return;
-	centiseconds = centiseconds + 1;
+    centiseconds = 0;
+    secondsc = 0;
+    minutes = 0;
+    
+    var millisSince  = (new Date()).getTime() - started.getTime();
+	centiseconds = millisSince * 0.1;
 	if(centiseconds >= 100) {
 		seconds++;
 		centiseconds = 0;
@@ -46,14 +52,13 @@ function setPaused() {
 
 function setResumed() {
 	this.active = true;
+    this.started = new Date();
 }
 
 
 function resetTime() {
 	this.active = false;
-	this.minutes = 0;
-	this.seconds = 0;
-	this.centiseconds = 0;
+    this.started = null;
 	setPage();
 }
 
