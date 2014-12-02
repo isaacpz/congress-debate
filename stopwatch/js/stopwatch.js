@@ -8,18 +8,18 @@ function incrementTimer() {
 	if(!active)
 		return;
     centiseconds = 0;
-    secondsc = 0;
+    seconds = 0;
     minutes = 0;
     
     var millisSince  = (new Date()).getTime() - started.getTime();
 	centiseconds = millisSince * 0.1;
-	if(centiseconds >= 100) {
+	while(centiseconds >= 100) {
 		seconds++;
-		centiseconds = 0;
+		centiseconds = centiseconds - 100;
 	}
-	if(seconds >= 60) {
+	while(seconds >= 60) {
 		minutes++;
-		seconds = 0;
+		seconds = seconds - 60;
 	}
 	setPage();
 	checkAlerts();
@@ -51,8 +51,9 @@ function setPaused() {
 }
 
 function setResumed() {
+    if(this.started == null)
+        this.started = new Date();
 	this.active = true;
-    this.started = new Date();
 }
 
 
