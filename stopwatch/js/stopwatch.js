@@ -59,8 +59,12 @@ function setResumed() {
 
 function resetTime() {
 	this.active = false;
-    this.started = null;
+	this.seconds = 0;
+	this.minutes = 0;
+	this.centiseconds = 0;
 	setPage();
+	
+        this.started = null;
 }
 
 function checkAlerts() {
