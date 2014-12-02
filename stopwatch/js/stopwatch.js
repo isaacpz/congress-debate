@@ -12,7 +12,7 @@ function incrementTimer() {
     minutes = 0;
     
     var millisSince  = (new Date()).getTime() - started.getTime();
-	centiseconds = millisSince * 0.1;
+	centiseconds = Math.floor(millisSince * 0.1);
 	while(centiseconds >= 100) {
 		seconds++;
 		centiseconds = centiseconds - 100;
