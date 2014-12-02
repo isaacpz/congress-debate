@@ -7,11 +7,11 @@ var active = false;
 function incrementTimer() {
 	if(!active)
 		return;
-    centiseconds = 0;
-    seconds = 0;
-    minutes = 0;
+    	centiseconds = 0;
+    	seconds = 0;
+    	minutes = 0;
     
-    var millisSince  = (new Date()).getTime() - started.getTime();
+    	var millisSince  = (new Date()).getTime() - started.getTime();
 	centiseconds = Math.floor(millisSince * 0.1);
 	while(centiseconds >= 100) {
 		seconds++;
